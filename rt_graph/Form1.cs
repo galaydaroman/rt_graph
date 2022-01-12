@@ -125,6 +125,9 @@ namespace rt_graph
                 if (j % 2 == 0)
                 {
                     canvas.DrawString(string.Format("{0}°", j * 10), font, Brushes.Black, 2, height - get_y(j * 10) - 13);
+                } else if (j == 9)
+                {
+                    canvas.DrawString(string.Format("{0}°", 100), font, Brushes.Black, 2, height - get_y(100) - 13);
                 }
                 p.Color = j % 2 != 0 ? Color.Gray : Color.Black;
                 p.DashStyle = j % 2 != 0 ? System.Drawing.Drawing2D.DashStyle.Dot : System.Drawing.Drawing2D.DashStyle.Dash;
